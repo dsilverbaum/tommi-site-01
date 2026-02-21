@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tommi — Osaaminen & blogi</title>
+  <meta name="description" content="Tommin henkilökohtainen sivu: osaaminen, fokusalueet ja blogi." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="wrap nav">
+    <div class="logo">Tommi</div>
+    <nav>
+      <a href="#osaaminen">Osaaminen</a>
+      <a href="#about">About</a>
+      <a href="./blog/">Blogi</a>
+      <a href="#yhteys">Yhteys</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Rakennan selkeitä järjestelmiä epäselvään maailmaan.</h1>
+      <p>
+        Hallitustyö, ennakointi, asiakasportaalit ja käytännön AI-automaatio.
+        Minimalismi ajattelussa, realismi toteutuksessa.
+      </p>
+    </section>
+
+    <section id="osaaminen" class="section">
+      <h2>Osaaminen</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Strateginen ennakointi</h3>
+          <p>Toimialamuutosten analyysi, skenaariot, hallitustason päätöstuki.</p>
+        </article>
+        <article class="card">
+          <h3>B2B-asiakasprosessit</h3>
+          <p>Asiakasportaalit, läpinäkyvyys, vähemmän kitkaa ja manuaalityötä.</p>
+        </article>
+        <article class="card">
+          <h3>AI käytännössä</h3>
+          <p>Agenttimallit, automatisoidut työnkulut, todellinen hyöty ilman hypeä.</p>
+        </article>
+        <article class="card">
+          <h3>Sisältö & ajatusjohtajuus</h3>
+          <p>Faktapohjainen viestintä, selkeä argumentaatio, todennettavat lähteet.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        Olen Tommi. Toimin vakuutusalan hallitustyössä ja kehitän käytännöllisiä,
+        skaalautuvia tapoja yhdistää liiketoiminta, data ja teknologia.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Viimeisimmät kirjoitukset</h2>
+      <ul class="posts">
+        <li><a href="./blog/posts/ensimmainen-postaus.html">Ensimmäinen postaus: miksi asiakasnäkyvyys voittaa statusjahdin</a></li>
+      </ul>
+      <p><a class="inline-link" href="./blog/">→ Kaikki kirjoitukset</a></p>
+    </section>
+
+    <section id="yhteys" class="section">
+      <h2>Yhteys</h2>
+      <p>Sähköposti: <a href="mailto:tommi@example.com">tommi@example.com</a></p>
+      <p>LinkedIn: <a href="#">lisää profiililinkki</a></p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© <span id="year"></span> Tommi</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
