@@ -75,3 +75,22 @@ Use Cloudflare Tunnel if no open ports wanted.
 ## Recommendation
 1) Launch fast with GitHub Pages.
 2) Move to Pi hosting later only if you need full custom backend/control.
+
+---
+
+## Current automation in this workspace
+
+This workspace now has an auto-publish flow for this project:
+
+- Script: `scripts/publish-personal-site.sh`
+- Trigger: `.githooks/post-commit`
+
+Behavior:
+- When a commit includes files under `projects/personal-site/`, the hook runs the publish script.
+- Script syncs `projects/personal-site/` to `dsilverbaum/tommi-site-01`.
+- Pushes `main` and then force-syncs `gh-pages` from `main` (GitHub Pages source branch).
+
+Manual run (if needed):
+```bash
+/home/tommi/.openclaw/workspace/scripts/publish-personal-site.sh
+```
