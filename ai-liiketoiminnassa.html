@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI liiketoiminnassa: käytännön sovellukset ja strategiset valinnat | Tommi Silfverhuth</title>
-  <meta name="description" content="Miten AI:ta kannattaa käyttää liiketoiminnassa ilman hypeä: käytännön käyttökohteet, priorisointi ja strategiset valinnat." />
+  <title>AI liiketoiminnassa: arkkitehtuuri ja data ennen automaatiota | Tommi Silfverhuth</title>
+  <meta name="description" content="AI tuottaa liiketoiminta-arvoa vasta, kun arkkitehtuuri, data ja ohjausmalli ovat kunnossa. Muuten lopputulos on kallis pilotointikierre." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="author" content="Tommi" />
   <link rel="canonical" href="https://dsilverbaum.github.io/tommi-site-01/ai-liiketoiminnassa.html" />
   <link rel="alternate" hreflang="fi" href="https://dsilverbaum.github.io/tommi-site-01/ai-liiketoiminnassa.html" />
   <link rel="alternate" hreflang="en" href="https://dsilverbaum.github.io/tommi-site-01/en/ai-in-business.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="AI liiketoiminnassa: käytännön sovellukset ja strategiset valinnat" />
-  <meta property="og:description" content="Miten tekoälyä hyödynnetään liiketoiminnassa konkreettisesti: agentit, automaatio ja päätöstuki." />
+  <meta property="og:title" content="AI liiketoiminnassa: arkkitehtuuri ja data ennen automaatiota" />
+  <meta property="og:description" content="Ilman selkeää arkkitehtuuria ja dataa AI jää helposti irrallisiksi piloteiksi, joilla on heikko operatiivinen vaikutus." />
   <meta property="og:url" content="https://dsilverbaum.github.io/tommi-site-01/ai-liiketoiminnassa.html" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AI liiketoiminnassa: käytännön sovellukset ja strategiset valinnat" />
-  <meta name="twitter:description" content="Syväsukellus tekoälyn käytännön sovelluksiin liiketoiminnassa, strategisiin valintoihin ja hyötyihin." />
+  <meta name="twitter:title" content="AI liiketoiminnassa: arkkitehtuuri ja data ennen automaatiota" />
+  <meta name="twitter:description" content="Miksi arkkitehtuuri ja data ovat AI-hyödyntämisen perusedellytys — ja miten rakentaa toimiva käyttöönoton rytmi." />
   <link rel="stylesheet" href="./styles.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI liiketoiminnassa: käytännön sovellukset ja strategiset valinnat","datePublished":"2026-02-21","dateModified":"2026-02-21","author":{"@type":"Person","name":"Tommi"},"publisher":{"@type":"Person","name":"Tommi"},"mainEntityOfPage":"https://dsilverbaum.github.io/tommi-site-01/ai-liiketoiminnassa.html","inLanguage":"fi"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI liiketoiminnassa: arkkitehtuuri ja data ennen automaatiota","datePublished":"2026-02-21","dateModified":"2026-02-23","author":{"@type":"Person","name":"Tommi"},"publisher":{"@type":"Person","name":"Tommi"},"mainEntityOfPage":"https://dsilverbaum.github.io/tommi-site-01/ai-liiketoiminnassa.html","inLanguage":"fi"}</script>
 </head>
 <body>
   <header class="wrap nav">
@@ -34,46 +34,92 @@
 
   <main class="wrap">
     <article class="section" style="border-top:none; padding-top:2rem;">
-      <h1 style="margin:0 0 .6rem; font-size:clamp(1.6rem,3.5vw,2.3rem)">AI liiketoiminnassa: käytännön sovellukset ja strategiset valinnat</h1>
-      <p style="color:#666; margin-top:0;">Päivitetty: 21.2.2026</p>
+      <h1 style="margin:0 0 .6rem; font-size:clamp(1.6rem,3.5vw,2.3rem)">AI liiketoiminnassa: arkkitehtuuri ja data ennen automaatiota</h1>
+      <p style="color:#666; margin-top:0;">Päivitetty: 23.2.2026</p>
 
-      <p><strong>Tiivistelmä:</strong> Tekoäly (AI) ei ole enää tulevaisuuden lupaus, vaan konkreettinen liiketoiminnan työkalu. Tässä artikkelissa syvennytään tekoälyn käytännön sovelluksiin, strategisiin valintoihin ja siihen, miten yritykset voivat hyödyntää AI:ta tuottavuuden ja kilpailuedun rakentamiseen ilman turhaa hypeä.</p>
+      <p><strong>Tiivistelmä:</strong> Tekoälyn arvo ei synny mallin “älykkyydestä”, vaan siitä kuinka hyvin organisaatio kykenee kytkemään AI:n olemassa olevaan toimintaan. Tämä vaatii kahta perusedellytystä: toimivaa yritysarkkitehtuuria ja luotettavaa dataa. Ilman niitä AI jää helposti irrallisiksi piloteiksi, jotka näyttävät hyvältä demossa mutta eivät muuta liiketoiminnan suorituskykyä.</p>
 
-      <h2>AI:n realistinen potentiaali liiketoiminnassa</h2>
-      <p>Tekoäly on mullistamassa tapaa, jolla yritykset toimivat. Sen sijaan, että odotettaisiin "kaiken muuttavaa" suurta lanseerausta, todellinen arvo syntyy pienistä, toistuvista automaatioista ja tekoälyn integroimisesta olemassa oleviin prosesseihin.</p>
+      <p>AI-keskusteluissa puhutaan usein käyttötapauksista, malleista ja työkaluista. Vähemmän puhutaan siitä, mitä tapahtuu pinnan alla: missä data syntyy, miten se liikkuu prosesseissa, kuka omistaa päätökset ja mihin operatiiviseen rytmiin AI oikeasti kytkeytyy. Juuri nämä kysymykset erottavat pilotin tuotannosta.</p>
 
-      <h2>Käytännön sovellusalueita</h2>
+      <h2>Miksi AI-hankkeet pysähtyvät tuotannon kynnykselle?</h2>
+      <p>Tyypillinen kuvio on tuttu: löydetään lupaava käyttökohde, rakennetaan proof-of-concept, saadaan hetkellinen hyöty — ja sitten eteneminen hidastuu. Syyt eivät useimmiten ole mallissa, vaan rakenteessa:</p>
       <ul>
-        <li><strong>Asiakaspalvelun tehostaminen:</strong> Chatbotit, virtuaaliset assistentit ja tekoälypohjainen lipunreititys.</li>
-        <li><strong>Datasta oivalluksiin:</strong> Myyntiennusteet, markkinoinnin personointi ja riskien tunnistaminen.</li>
-        <li><strong>Operatiivinen automaatio:</strong> Rutiinitehtävien automatisointi, esimerkiksi dokumenttien käsittely tai tietojen syöttö.</li>
-        <li><strong>Sisällöntuotanto:</strong> Automaattiset raportit, markkinointitekstit ja sisällön personointi.</li>
-        <li><strong>Agenttipohjaiset työnkulut:</strong> Tekoälyagentit, jotka suorittavat useamman askeleen tehtäviä itsenäisesti (esim. research, draftaus, analyysi).</li>
+        <li><strong>Prosessikytkentä puuttuu:</strong> AI tuottaa vastauksen, mutta vastaus ei ohjaa mitään päätöstä tai työnkulkua.</li>
+        <li><strong>Data on pirstaleista:</strong> lähteet ovat ristiriitaisia, omistajuus epäselvä ja laatu vaihteleva.</li>
+        <li><strong>Arkkitehtuurin riippuvuudet yllättävät:</strong> integraatiot, käyttöoikeudet ja vastuuketjut paljastuvat liian myöhään.</li>
+        <li><strong>Ohjausmalli puuttuu:</strong> kukaan ei omista AI-ratkaisun koko elinkaarta liiketoiminnan näkökulmasta.</li>
       </ul>
 
-      <h2>Strategiset valinnat AI:n käyttöönotossa</h2>
-      <p>AI:n hyödyntäminen vaatii selkeää strategiaa ja kurinalaista toteutusta. Tärkeintä ei ole "mikä teknologia?", vaan "mitä liiketoimintaongelmaa ratkaisemme?"</p>
+      <p>Kun nämä kohdat ovat epäselviä, organisaatio optimoi helposti väärää asiaa: mallin laatua sen sijaan, että se optimoi päätösketjun laatua.</p>
+
+      <h2>Arkkitehtuuri ensin: mitä se käytännössä tarkoittaa?</h2>
+      <p>Arkkitehtuurin rooli AI:ssa ei ole hidastaa, vaan poistaa sattumaa. Se tekee näkyväksi kolme asiaa ennen kuin investointi kasvaa:</p>
+      <ol>
+        <li><strong>Mihin kyvykkyyteen AI liittyy?</strong> (esim. riskiarviointi, asiakaspalvelun läpimenoaika, myynnin ennustettavuus)</li>
+        <li><strong>Mitä riippuvuuksia ratkaisu synnyttää?</strong> (datalähteet, integraatiot, käyttövaltuudet, audit trail)</li>
+        <li><strong>Mitä vanhaa voidaan lopettaa?</strong> (manuaaliset välivaiheet, rinnakkaiset raportit, kaksoissyöttö)</li>
+      </ol>
+
+      <p>Jos AI-aloite ei paranna yhtä nimettyä kyvykkyyttä mitattavasti tai poista jotain olemassa olevaa kitkaa, se on useimmiten liian varhainen.</p>
+
+      <h2>Data ei ole “AI-tiimin asia” vaan johtamiskysymys</h2>
+      <p>Laadukas data on paljon muutakin kuin tekninen putki. Se on sopimus siitä, mikä tieto on päätöksenteossa luotettavaa. Käytännössä tämä tarkoittaa:</p>
       <ul>
-        <li><strong>Aloita pienestä:</strong> Tunnista 1–2 kipupistettä, joihin AI voi tuoda mitattavaa hyötyä.</li>
-        <li><strong>Datapohja kuntoon:</strong> Laadukas data on tekoälyn elinehto. Ilman sitä mallit ovat hyödyttömiä.</li>
-        <li><strong>Eettiset ja vastuuasiat:</strong> Varmista, että tekoälyn käyttö on läpinäkyvää, reilua ja vastuullista.</li>
-        <li><strong>Jatkuva oppiminen:</strong> Tekoälymallit kehittyvät, joten myös organisaation on kyettävä oppimaan ja adaptoitumaan.</li>
+        <li><strong>Määritelmäkuria:</strong> samat käsitteet tarkoittavat samaa eri yksiköissä.</li>
+        <li><strong>Omistajuutta:</strong> jokaisella kriittisellä datakentällä on vastuutaho.</li>
+        <li><strong>Laaturajoja:</strong> tiedetään milloin data on riittävän hyvää automatisoituun päätöstukeen.</li>
+        <li><strong>Jäljitettävyyttä:</strong> tiedetään, mistä suositus tuli ja mihin tietoon se perustui.</li>
       </ul>
+
+      <p>Ilman näitä AI kyllä tuottaa vastauksia, mutta organisaatio ei uskalla käyttää niitä päätöksenteossa. Se on kallis tilanne: teknologia toimii, mutta luottamus ei.</p>
+
+      <h2>AI:n kypsyysmalli liiketoiminnan näkökulmasta</h2>
+      <p>Hyödyllinen tapa jäsentää etenemistä:</p>
+      <ul>
+        <li><strong>Taso 1 — Avustava:</strong> AI auttaa yksittäistä käyttäjää tekemään työn nopeammin.</li>
+        <li><strong>Taso 2 — Prosessiin kytketty:</strong> AI vaikuttaa koko työnkulun läpimenoaikaan tai laatuun.</li>
+        <li><strong>Taso 3 — Ohjaava:</strong> AI tuottaa päätössuosituksia, joita seurataan mittareilla ja hallitaan governance-mallilla.</li>
+      </ul>
+
+      <p>Useimmat organisaatiot jäävät tasolle 1, koska tasolle 2 siirtyminen vaatii arkkitehtuurityötä ja tasolle 3 siirtyminen datan hallintaa sekä johtamisen kuria.</p>
+
+      <h2>Mitä mitata, jotta AI ei jää teatteriksi?</h2>
+      <p>Suosittelen seuraamaan vähintään kolmea vaikutusmittaria:</p>
+      <ul>
+        <li><strong>Läpimenoaika:</strong> kuinka paljon prosessi nopeutui?</li>
+        <li><strong>Päätöksen laatu:</strong> paransiko AI osumatarkkuutta tai vähensikö virheitä?</li>
+        <li><strong>Poistettu työ:</strong> mitä manuaalista vaihetta ei enää tehdä?</li>
+      </ul>
+
+      <p>Jos mittarit rajoittuvat käyttöasteeseen tai promptien määrään, keskustelu jää helposti teknologiakeskeiseksi. Liiketoiminnan näkökulmasta tärkeämpää on suorituskyky, ei käyttöliittymäaktiivisuus.</p>
+
+      <h2>Yksi käytännön etenemismalli 90 päivälle</h2>
+      <ol>
+        <li><strong>Päivät 1–30:</strong> valitse yksi kriittinen kyvykkyys ja rajaa yksi prosessikohde, jossa vaikutus voidaan mitata.</li>
+        <li><strong>Päivät 31–60:</strong> rakenna tuotantokelpoinen datalinja + selkeä omistajuus päätökselle.</li>
+        <li><strong>Päivät 61–90:</strong> vie ratkaisu operatiiviseen rytmiin, poista vanha rinnakkaisvaihe ja seuraa vaikutusmittarit viikoittain.</li>
+      </ol>
+
+      <p>Tämä rytmi pakottaa yhdistämään strategian, arkkitehtuurin ja toteutuksen. Samalla se vähentää riskiä, että AI-hanke jää irralliseksi kokeiluksi.</p>
+
+      <h2>Johtopäätös</h2>
+      <p>AI ei korvaa arkkitehtuuria eikä datajohtamista — se tekee niiden puutteet näkyvämmiksi. Siksi tehokas AI-hyödyntäminen alkaa harvoin mallivalinnasta. Se alkaa siitä, että organisaatio tietää mihin kyvykkyyteen se vaikuttaa, millä datalla se toimii ja kuka omistaa vaikutuksen.</p>
+
+      <p>Kun nämä ovat kunnossa, AI ei ole enää erillinen hanke. Se on osa normaalia liiketoiminnan kehittämistä.</p>
 
       <h2>Key takeaways</h2>
       <ul>
-        <li>Tekoälyn arvo syntyy konkreettisista, mitattavista liiketoimintaongelmien ratkaisuista.</li>
-        <li>Älä huku hypeen – keskity datan laatuun ja operatiiviseen integraatioon.</li>
-        <li>Strateginen valinta on AI:n rooli: tehostaja vai transformoija?</li>
+        <li>AI-arvo syntyy prosessiin kytkeytyneestä päätöksenteosta, ei irrallisista piloteista.</li>
+        <li>Yritysarkkitehtuuri vähentää sattumaa: se tekee riippuvuudet ja prioriteetit näkyviksi.</li>
+        <li>Data on johtamiskysymys: omistajuus, laatu ja jäljitettävyys ratkaisevat luottamuksen.</li>
+        <li>Mittaa vaikutusta läpimenoajalla, päätöksen laadulla ja poistuneella manuaalityöllä.</li>
       </ul>
-
-
 
       <section class="section" style="padding-top:1.5rem;">
         <h2>Lue seuraavaksi</h2>
         <ul>
+          <li><a href="./blog/posts/yritysarkkitehtuuri-ei-diaharjoitus.html">Yritysarkkitehtuuri ei ole diaharjoitus</a></li>
           <li><a href="./asiakasportaali-hyodyt.html">Asiakasportaali B2B: hyödyt käytännössä</a></li>
-          <li><a href="./blog/posts/ensimmainen-postaus.html">Miksi asiakasnäkyvyys voittaa statusjahdin</a></li>
           <li><a href="./blog/">Kaikki blogikirjoitukset</a></li>
         </ul>
       </section>
