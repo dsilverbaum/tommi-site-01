@@ -27,37 +27,74 @@
       <h1 style="margin:0 0 .6rem; font-size:clamp(1.6rem,3.5vw,2.3rem)">Yritysarkkitehtuuri ei ole diaharjoitus</h1>
       <p style="color:#666; margin-top:0;">23.2.2026</p>
 
-      <p><strong>Tiivistelmä:</strong> Yritysarkkitehtuuri on hyödyllinen vasta silloin, kun se auttaa tekemään vaikeita päätöksiä selkeämmin. Jos se jää irralliseksi dokumentiksi, se tuottaa lähinnä hallinnollista lämpöä.</p>
+      <p><strong>Tiivistelmä:</strong> Yritysarkkitehtuurista puhutaan usein teknisenä asiana, vaikka kyse on ennen kaikkea johtamisesta. Sen tehtävä on tehdä valinnoista näkyviä ja vertailukelpoisia: mihin panostamme, mitä yksinkertaistamme ja mitä lopetamme. Jos tämä ei tapahdu, arkkitehtuuri jää raportoinniksi.</p>
 
-      <p>Monessa organisaatiossa yritysarkkitehtuuri tarkoittaa käytännössä kahta asiaa: nykytilakuvia ja toiveita tulevasta. Molemmat ovat tarpeellisia, mutta yksinään ne eivät muuta mitään.</p>
+      <p>Moni organisaatio tekee yritysarkkitehtuuria kuin tilannekuvaa: kuvataan järjestelmät, rajapinnat, prosessit ja tavoitetila. Tämä on hyödyllistä, mutta vain lähtötaso. Todellinen kysymys on: <em>muuttuuko päätöksenteko tämän työn seurauksena?</em></p>
 
-      <p>Toimiva arkkitehtuuri näkyy kolmessa kohdassa: investointipäätöksissä, priorisoinnissa ja lopettamispäätöksissä. Eli mihin panostetaan, mitä yksinkertaistetaan ja mistä luovutaan.</p>
-
-      <h2>Mistä tunnistaa, että arkkitehtuuri toimii?</h2>
+      <h2>Miksi yritysarkkitehtuuri epäonnistuu käytännössä?</h2>
+      <p>Epäonnistuminen ei yleensä johdu osaamisen puutteesta. Se johtuu siitä, että arkkitehtuuri kytketään liian löyhästi kolmeen johtamisen perusprosessiin:</p>
       <ul>
-        <li><strong>Päätöksissä on yhteinen kieli.</strong> Liiketoiminta, IT ja johto puhuvat samoista kyvykkyyksistä, eivät toisistaan irrallisista hankkeista.</li>
-        <li><strong>Riippuvuudet tulevat näkyviksi ajoissa.</strong> Yllätykset eivät katoa, mutta ne vähenevät.</li>
-        <li><strong>Kehityssalkku pysyy hallittavana.</strong> Kaikkea ei tehdä samaan aikaan, eikä "strateginen" tarkoita kaikkea.</li>
+        <li><strong>Investoinnit:</strong> Budjettipäätökset tehdään hankekohtaisesti ilman kyvykkyysnäkymää.</li>
+        <li><strong>Priorisointi:</strong> Kaikki on "strategista", jolloin mikään ei oikeasti ole.</li>
+        <li><strong>Lopettaminen:</strong> Vanhaa puretaan liian hitaasti, jolloin uusi kerrostuu vanhan päälle.</li>
       </ul>
 
-      <h2>Yksi käytännön malli</h2>
-      <p>Jos yritysarkkitehtuuri tuntuu raskaalta, aloita kevyesti:</p>
+      <p>Kun nämä kolme puuttuvat, arkkitehtuurista tulee helposti kuvaus menneestä, ei ohjaus tulevaan.</p>
+
+      <h2>Yritysarkkitehtuuri johtamisen instrumenttina</h2>
+      <p>Ajattelen yritysarkkitehtuuria instrumenttina, joka tuo päätöksiin rakennetta epävarmassa ympäristössä. Sen arvo ei synny siitä, että kuva on tarkka, vaan siitä, että keskustelu muuttuu täsmällisemmäksi.</p>
+
+      <p>Käytännössä tämä tarkoittaa esimerkiksi seuraavia kysymyksiä jokaisen merkittävän aloitteen kohdalla:</p>
       <ol>
-        <li>Listaa 5–7 tärkeintä liiketoimintakyvykkyyttä seuraavalle 12 kuukaudelle.</li>
-        <li>Kytke jokainen käynnissä oleva kehityshanke vähintään yhteen kyvykkyyteen.</li>
-        <li>Merkitse punaisella hankkeet, joilla ei ole selvää kytkentää tai omistajaa.</li>
+        <li>Mitä liiketoimintakyvykkyyttä tämä vahvistaa?</li>
+        <li>Mitä riippuvuuksia tämä luo tai purkaa?</li>
+        <li>Mitä tästä seuraa muille käynnissä oleville muutoksille?</li>
+        <li>Mitä voidaan tämän vuoksi lopettaa?</li>
       </ol>
 
-      <p>Tämä yksin ei tee arkkitehtuurista täydellistä, mutta tekee siitä ohjaavan. Ja juuri se on pointti.</p>
+      <p>Jos näihin ei saada kunnollista vastausta, aloite on usein liian aikainen tai liian epämääräinen.</p>
+
+      <h2>Kyvykkyysnäkymä: yksinkertainen, mutta alikäytetty</h2>
+      <p>Moni organisaatio hukkuu järjestelmälistoihin. Siksi kyvykkyysnäkymä on niin tehokas: se pakottaa puhumaan siitä, mitä liiketoiminnan pitää pystyä tekemään, eikä vain siitä, mitä teknologiaa on olemassa.</p>
+
+      <p>Suosittelen yksinkertaista rakennetta:</p>
+      <ul>
+        <li>5–7 kriittistä kyvykkyyttä seuraavalle 12 kuukaudelle</li>
+        <li>Jokaiselle kyvykkyydelle omistaja (liiketoiminta + teknologia)</li>
+        <li>Selkeä mittari: mitä "parempi" tarkoittaa kyseisessä kyvykkyydessä</li>
+      </ul>
+
+      <p>Tämä tekee salkkukeskusteluista rauhallisempia: puhutaan vähemmän hankkeiden nimistä ja enemmän kyvystä tuottaa tulosta.</p>
+
+      <h2>Miten arkkitehtuuri kytketään strategiaan ilman korulauseita?</h2>
+      <p>Yksi käytännön virhe on erottaa strategia, kehityssalkku ja arkkitehtuuri eri keskusteluiksi. Tällöin strategia jää tavoitteeksi, salkku tehtävälistaksi ja arkkitehtuuri dokumentiksi.</p>
+
+      <p>Toimivampi rytmi on lyhyt ja toistuva:</p>
+      <ul>
+        <li><strong>Kuukausi:</strong> mitä kyvykkyyksiä vahvistamme nyt?</li>
+        <li><strong>Kvarttaali:</strong> mitkä riippuvuudet hidastavat eniten?</li>
+        <li><strong>Puolivuosi:</strong> mitä rakenteita puretaan, jotta nopeus kasvaa?</li>
+      </ul>
+
+      <p>Tämä ei poista epävarmuutta, mutta vähentää sattumaa. Ja johtamisessa juuri se on usein ratkaisevaa.</p>
+
+      <h2>AI ja yritysarkkitehtuuri: uusi kerros vai parempi päätöskyky?</h2>
+      <p>Nyt kun AI-hankkeita käynnistyy nopeasti, yritysarkkitehtuurin merkitys kasvaa. Ilman selkeää arkkitehtuuriohjausta AI jää helposti irrallisiksi piloteiksi: vaikuttavia demoja, heikkoa operatiivista vaikutusta.</p>
+
+      <p>Hyvä nyrkkisääntö: AI-aloite kannattaa priorisoida vasta, kun se on kytketty selvästi yhteen kriittiseen kyvykkyyteen ja sillä on vaikutus joko läpimenoaikaan, päätöksen laatuun tai virheiden määrään.</p>
+
+      <h2>Johtopäätös</h2>
+      <p>Yritysarkkitehtuuri on lopulta kurinalaista valintaa. Se tekee näkyväksi kompromissit, joita joka tapauksessa tehdään. Siksi sen arvo ei ole täydellisessä mallissa, vaan siinä, että organisaatio pystyy tekemään parempia päätöksiä toistettavasti.</p>
+
+      <p>Kun arkkitehtuuri toimii, se ei näy vain kuvissa. Se näkyy siinä, että tekeminen yksinkertaistuu, prioriteetit terävöityvät ja muutoksen läpivienti nopeutuu.</p>
 
       <h2>Key takeaways</h2>
       <ul>
-        <li>Yritysarkkitehtuuri on päätöksenteon väline, ei dokumentaatioprojekti.</li>
-        <li>Arvo syntyy priorisoinnista ja rajauksesta, ei kaavioiden määrästä.</li>
-        <li>Pieni, toistuva rytmi toimii paremmin kuin yksi iso arkkitehtuuriharjoitus vuodessa.</li>
+        <li>Yritysarkkitehtuuri on johtamisen työkalu, ei dokumentaatioprojekti.</li>
+        <li>Arvo syntyy investointi-, priorisointi- ja lopettamispäätöksissä.</li>
+        <li>Kyvykkyysnäkymä auttaa yhdistämään strategian ja arjen tekemisen.</li>
+        <li>Pieni, toistuva päätösrytmi toimii paremmin kuin yksittäinen suuri arkkitehtuurihanke.</li>
       </ul>
-
-      <p><strong>Haluatko vastaavan mallin omaan tilanteeseesi?</strong> <a href="mailto:tommi.silfverhuth@iki.fi?subject=Aloitus:%2020%20min%20kartoitus">Varaa 20 min kartoitus</a>.</p>
     </article>
 
     <section class="section">
