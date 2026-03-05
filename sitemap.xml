@@ -31,6 +31,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dsilverbaum.github.io/tommi-site-01/blog/posts/ihmiselaman-tokenisoituminen.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dsilverbaum.github.io/tommi-site-01/blog/posts/yritysarkkitehtuuri-ei-diaharjoitus.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
